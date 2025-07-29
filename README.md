@@ -1,7 +1,5 @@
 # Anderson Junior - Portfólio Fullstack
 
-![Preview](public/meuPerfil.jpg)
-
 ## Sobre o Projeto
 
 Este é o meu portfólio online, desenvolvido em Next.js.
