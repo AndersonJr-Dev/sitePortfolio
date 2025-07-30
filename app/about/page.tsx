@@ -42,7 +42,7 @@ const education = [
   },
   {
     title: "Curso Developer Fullstack",
-    institution: "Avanti",
+    institution: "Atlantico Avanti",
     period: "2025",
     status: "Concluído",
   }
