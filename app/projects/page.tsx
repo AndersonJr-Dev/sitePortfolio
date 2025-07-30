@@ -41,6 +41,18 @@ export const projects = [
     github: "https://github.com/AndersonJr-Dev/projeto_tarefas_fastapi",
     demo: "",
     category: "Backend",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Projeto App Feira de Trocas (TrocAi)",
+    description: "Uma aplicação full-stack para troca de itens usados em uma comunidade local.",
+    longDescription: "TrocAi é uma plataforma que permite aos usuários de uma comunidade local registrar e trocar itens usados, como livros, roupas, brinquedos e eletrônicos, promovendo o consumo consciente e fortalecendo os laços comunitários.",
+    image: "/app-feira-trocas.png",
+    technologies: ["ReactJS", "Node.js", "Express", "Prisma ORM", "PostgreSQL"],
+    github: "https://github.com/AndersonJr-Dev/app-feira-de-trocas"
+    demo: "https://github.com/AndersonJr-Dev/app-feira-de-trocas",
+    category: "Fullstack",
     featured: true,
   },
 ]
