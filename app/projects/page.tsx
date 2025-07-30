@@ -50,8 +50,8 @@ export const projects = [
     longDescription: "TrocAi é uma plataforma que permite aos usuários de uma comunidade local registrar e trocar itens usados, como livros, roupas, brinquedos e eletrônicos, promovendo o consumo consciente e fortalecendo os laços comunitários.",
     image: "/app-feira-trocas.png",
     technologies: ["ReactJS", "Node.js", "Express", "Prisma ORM", "PostgreSQL"],
-    github: "https://github.com/AndersonJr-Dev/app-feira-de-trocas"
-    demo: "https://github.com/AndersonJr-Dev/app-feira-de-trocas",
+    github: "https://github.com/AndersonJr-Dev/app-feira-de-trocas",
+    demo: "",
     category: "Fullstack",
     featured: true,
   },
