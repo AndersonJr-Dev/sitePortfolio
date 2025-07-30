@@ -45,6 +45,12 @@ const education = [
     institution: "Atlantico Avanti",
     period: "2025",
     status: "Concluído",
+  },
+    {
+    title: "Curso Desenvolvimento Web",
+    institution: "Udemy",
+    period: "2025",
+    status: "Em andamento",
   }
 ]
 
