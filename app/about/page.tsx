@@ -5,20 +5,20 @@ import { Download, MapPin, Calendar, Award } from "lucide-react"
 import Image from "next/image"
 
 const experiences = [
-  {
-    title: "Desenvolvedor Frontend",
-    company: "Tech Startup",
-    period: "2023 - Presente",
-    description:
-      "Desenvolvimento de interfaces modernas com React e Next.js, implementação de designs responsivos e otimização de performance.",
-  },
-  {
-    title: "Desenvolvedor Júnior",
-    company: "Agência Digital",
-    period: "2022 - 2023",
-    description:
-      "Criação de websites e aplicações web, manutenção de sistemas legados e colaboração em projetos de equipe.",
-  },
+{
+  title: "Desenvolvedor Web - Back-end",
+  company: "Projeto: App Feira de Trocas",
+  period: "2025 (Projeto de Acadêmico)",
+  description:
+    "Participei no desenvolvimento do backend, criando uma API RESTful com Node.js e Express. Fui responsável pela modelagem do banco de dados com Prisma e colaborei ativamente no planejamento e definição de requisitos do projeto.",
+},
+{
+  title: "Desenvolvedor Web - Full Stack",
+  company: "Projeto: Agenda Digital",
+  period: "2025 (Projeto Pessoal)",
+  description:
+    "Desenvolvi uma agenda digital completa com arquitetura MVC, utilizando Node.js, Express e MongoDB. Implementei funcionalidades CRUD, autenticação de usuários com criptografia e gerenciamento de sessões.",
+},
 ]
 
 const education = [
