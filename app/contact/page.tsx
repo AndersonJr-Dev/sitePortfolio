@@ -80,7 +80,7 @@ export default function ContactPage() {
     const fullName = `${firstName} ${lastName}`.trim()
     // Monte a mensagem
     const text = encodeURIComponent(
-      `Olá Anderson!%0A%0ANome: ${fullName}\nEmail: ${email}\nAssunto: ${subject}\nMensagem: ${message}`
+      `Olá Anderson!\n\nNome: ${fullName}\nEmail: ${email}\nAssunto: ${subject}\nMensagem: ${message}`
     )
     // Seu número no formato internacional, sem espaços ou traços
     const phone = "5521994220180"
