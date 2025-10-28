@@ -17,7 +17,7 @@ export const projects = [
     github: "https://github.com/AndersonJr-Dev/buscador-de-perfil-github",
     demo: "https://andersonjr-dev.github.io/buscador-de-perfil-github/",
     category: "Frontend",
-    featured: true, // Marque como true para aparecer em destaque
+    featured: false, // Marque como true para aparecer em destaque
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ export const projects = [
     github: "https://github.com/AndersonJr-Dev/teste-tecnico-innovation-class",
     demo: "https://andersonjr-dev.github.io/teste-tecnico-innovation-class/",
     category: "Frontend",
-    featured: true,
+    featured: false,
   },
   {
     id: 3,
@@ -51,6 +51,30 @@ export const projects = [
     image: "/app-feira-trocas.png",
     technologies: ["ReactJS", "Node.js", "Express", "Prisma ORM", "PostgreSQL"],
     github: "https://github.com/AndersonJr-Dev/app-feira-de-trocas",
+    demo: "",
+    category: "Fullstack",
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "Projeto SitePrótetico",
+    description: "Site institucional para uma clínica de prótese dentária.",
+    longDescription: "Desenvolvido um site institucional para uma clínica de prótese dentária, apresentando serviços, equipe e informações de contato de forma clara e atraente.",
+    image: "/site-protetico.png",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Vite"],
+    github: "https://github.com/AndersonJr-Dev/SiteProtetico/tree/main",
+    demo: "",
+    category: "Frontend",
+    featured: true,
+  },
+  {
+    id: 6,
+    title: "Projeto ImagePress",
+    description: "Aplicativo de desktop Electron para otimizar imagens arrastadas (JPG/PNG)",
+    longDescription: "ImagePress é um aplicativo de desktop desenvolvido com Electron que permite aos usuários otimizar imagens arrastando e soltando arquivos JPG ou PNG na interface. O aplicativo reduz o tamanho dos arquivos de imagem sem comprometer significativamente a qualidade, facilitando o compartilhamento e armazenamento.",
+    image: "/imagepress.png",
+    technologies: ["Electron", "Node.js", "JavaScript", "Sharp"],
+    github: "https://github.com/AndersonJr-Dev/imagepress",
     demo: "",
     category: "Fullstack",
     featured: true,

@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     description: "Portfólio online de desenvolvedor fullstack disponível para projetos e oportunidades.",
     type: "website",
     images: ["/meuPerfil.jpg"],
-    url: "https://seusite.com", // Altere para sua URL real
+    url: "https://andersondev-silk.vercel.app/", // Altere para sua URL real
   },
   generator: 'Anderson Assumpção Junior',
   alternates: {
-    canonical: "https://seusite.com" // Altere para sua URL real
+    canonical: "https://andersondev-silk.vercel.app/" // Altere para sua URL real
   }
 }
 
