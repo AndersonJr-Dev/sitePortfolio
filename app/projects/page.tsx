@@ -79,6 +79,18 @@ export const projects = [
     category: "Fullstack",
     featured: true,
   },
+  {
+    id: 7,
+    title: "Projeto Buscador de Vulnerabilidades",
+    description: "Um programa para busca de vulnerabilidades em sistemas web, desenvolvido para profissionais de segurança e participantes de programas de bug bounty.",
+    longDescription: "Este projeto é uma ferramenta de linha de comando desenvolvida em Python que permite aos usuários buscar vulnerabilidades comuns em sistemas web. Com uma interface simples, o programa realiza varreduras automatizadas para identificar falhas de segurança, auxiliando profissionais de segurança e entusiastas de bug bounty a protegerem suas aplicações.",
+    image: "/buscador-vulnerabilidades.png",
+    technologies: ["Python"],
+    github: "https://github.com/AndersonJr-Dev/Buscador-Vulnerabilidades",
+    demo: "",
+    category: "Backend",
+    featured: false,
+  },
 ]
 
 const categories = ["Todos", "Fullstack", "Frontend", "Backend"]
