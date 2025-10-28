@@ -19,6 +19,13 @@ const experiences = [
   description:
     "Desenvolvi uma agenda digital completa com arquitetura MVC, utilizando Node.js, Express e MongoDB. Implementei funcionalidades CRUD, autenticação de usuários com criptografia e gerenciamento de sessões.",
 },
+{
+  title: "Desenvolvedor Web - Front-end",
+  company: "Projeto: Site Prótetico",
+  period: "2025 (Projeto Freelancer)",
+  description: 
+  "Desenvolvimento completo de uma landing page de alta performance para um profissional de prótese dentária, com foco principal na captação de leads e otimização para mecanismos de busca (SEO).",
+},
 ]
 
 const education = [
