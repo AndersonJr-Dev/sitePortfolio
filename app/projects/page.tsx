@@ -91,6 +91,19 @@ export const projects = [
     category: "Backend",
     featured: false,
   },
+  {
+    id: 8,
+    title: "Pilops - Histórico de Voos",
+    description: "Projeto full-stack com frontend e API para histórico de voos.",
+    longDescription:
+      "Frontend em React/Vite e backend em Node/Express/TypeScript que servem um histórico de voos com transformação de dados. O frontend consome a API e apresenta lista e detalhes de voos seguindo design do Figma.",
+    image: "/teste-pilops.png",
+    technologies: ["React", "Vite", "TypeScript", "Node.js", "Express"],
+    github: "https://github.com/AndersonJr-Dev/pilops-frontend",
+    demo: "https://pilops-frontend.vercel.app/",
+    category: "Fullstack",
+    featured: false,
+  },
 ]
 
 const categories = ["Todos", "Fullstack", "Frontend", "Backend"]
@@ -131,20 +144,28 @@ export default function ProjectsPage() {
                         className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <Badge className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600">
-                        {project.category}
-                      </Badge>
-                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="flex gap-2">
-                          <Button asChild size="sm" variant="secondary" className="flex-1">
-                            <Link href={project.github} target="_blank">
-                              <Github className="h-4 w-4 mr-2" />
-                              Código
-                            </Link>
-                          </Button>
+                          <Badge className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600">
+                            {project.category}
+                          </Badge>
+                          <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="flex gap-2">
+                              <Button asChild size="sm" variant="secondary" className="flex-1">
+                                <Link href={project.github} target="_blank">
+                                  <Github className="h-4 w-4 mr-2" />
+                                  Código
+                                </Link>
+                              </Button>
+                              {project.demo && (
+                                <Button asChild size="sm" className="flex-1">
+                                  <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="h-4 w-4 mr-2" />
+                                    Visualizar
+                                  </Link>
+                                </Button>
+                              )}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
 
                     <CardHeader>
                       <CardTitle className="group-hover:text-blue-600 transition-colors duration-300">
@@ -217,6 +238,14 @@ export default function ProjectsPage() {
                           Código
                         </Link>
                       </Button>
+                      {project.demo && (
+                        <Button asChild size="sm" className="flex-1">
+                          <Link href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-3 w-3 mr-1" />
+                            Visualizar
+                          </Link>
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
