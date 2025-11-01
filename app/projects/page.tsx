@@ -15,7 +15,7 @@ export const projects = [
     image: "/buscador-github.png", // Substitua pelo caminho da imagem do projeto se desejar
     technologies: ["React", "Vite", "TypeScript", "Tailwind CSS", "GitHub API"],
     github: "https://github.com/AndersonJr-Dev/buscador-de-perfil-github",
-    demo: "https://andersonjr-dev.github.io/buscador-de-perfil-github/",
+    //demo: "https://andersonjr-dev.github.io/buscador-de-perfil-github/",
     category: "Frontend",
     featured: false, // Marque como true para aparecer em destaque
   },
@@ -27,7 +27,7 @@ export const projects = [
     image: "/teste-innovation-class.png",
     technologies: ["React", "Vite", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/AndersonJr-Dev/teste-tecnico-innovation-class",
-    demo: "https://andersonjr-dev.github.io/teste-tecnico-innovation-class/",
+    //demo: "https://andersonjr-dev.github.io/teste-tecnico-innovation-class/",
     category: "Frontend",
     featured: false,
   },
