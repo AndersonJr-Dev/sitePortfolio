@@ -65,7 +65,7 @@ export const projects = [
     github: "https://github.com/AndersonJr-Dev/SiteProtetico/tree/main",
     demo: "",
     category: "Frontend",
-    featured: true,
+    featured: false,
   },
   {
     id: 6,
@@ -103,6 +103,18 @@ export const projects = [
     demo: "https://pilops-frontend.vercel.app/",
     category: "Fullstack",
     featured: false,
+  },
+  {
+    id: 9,
+    title: "Projeto Reserve.me",
+    description: "Sistema de reserva de horários para salões e barbearias, com funcionalidades de cadastro, login e reserva.",
+    longDescription: "Desenvolvido um sistema de reserva de horários para salões e barbearias, permitindo que os usuários se registrem, façam login, reservem horários disponíveis. O sistema também inclui um painel administrativo para gerenciar funcionarios, CRM, funcionarios, horários e reservas.",
+    image: "/reserve-me.png",
+    technologies: ["Next.Js", "TypeScript", "Tailwind CSS", "Supabase", "Lucide Icons"],
+    github: "https://github.com/AndersonJr-Dev/reserve-me-saas",
+    demo: "https://reserve-me-online.vercel.app/",
+    category: "Fullstack",
+    featured: true,
   },
 ]
 
