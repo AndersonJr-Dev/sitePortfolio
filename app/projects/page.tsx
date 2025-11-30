@@ -122,7 +122,7 @@ export const projects = [
     description: "Site institucional para uma clínica de prótese dentária.",
     longDescription: "Desenvolvido um site institucional para uma clínica de prótese dentária, apresentando serviços, equipe e informações de contato de forma clara e atraente.",
     image: "/helson-protetico.png",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Vite"],
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "https://github.com/AndersonJr-Dev/helsonprotetico",
     demo: "https://helsonprotetico.vercel.app/",
     category: "Fullstack",
