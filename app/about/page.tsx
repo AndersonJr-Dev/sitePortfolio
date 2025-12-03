@@ -122,7 +122,7 @@ export default function AboutPage() {
                     <span className="text-slate-900">Disponível para projetos</span>
                   </div>
                   <a
-                    href="/curriculo-anderson-dev-fullstack.pdf"
+                    href="/curriculo-anderson-fullstack.pdf"
                     download
                     className="w-full inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-2 px-4 rounded transition-colors duration-200 hover:from-blue-700 hover:to-purple-700"
                   >
