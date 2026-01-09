@@ -9,7 +9,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 // Importa os projetos da página de projetos
-import { projects as allProjects } from "./projects/page"
+import { projects as allProjects } from "@/lib/data"
 
 // Filtra apenas os projetos em destaque
 const featuredProjects = allProjects.filter((p) => p.featured)
