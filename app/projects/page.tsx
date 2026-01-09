@@ -128,6 +128,18 @@ export const projects = [
     category: "Fullstack",
     featured: true,
   },
+  {
+    id: 11,
+    title: "Projeto Cardápio Digital",
+    description: "Aplicativo web de cardápio digital para lanchonetes",
+    longDescription: "Desenvolvido um aplicativo web de cardápio digital para lanchonetes, permitindo que os clientes visualizem o cardápio, façam pedidos e pagamentos diretamente pelo celular, melhorando a experiência do cliente e otimizando o atendimento.",
+    image: "/cardapio-rb.png",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn/ui"],
+    github: "https://github.com/AndersonJr-Dev/cardapio-rb",
+    demo: "",
+    category: "Fullstack",
+    featured: false,
+  },
 ]
 
 const categories = ["Todos", "Fullstack", "Frontend", "Backend"]
