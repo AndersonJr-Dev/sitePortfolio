@@ -26,6 +26,13 @@ const experiences = [
   description: 
   "Desenvolvimento completo de uma landing page de alta performance para um profissional de prótese dentária, com foco principal na captação de leads e otimização para mecanismos de busca (SEO).",
 },
+{
+  title: "Desenvolvedor Web - Front-end",
+  company: "Projeto: Cardápio Digital",
+  period: "2025 (Projeto Freelancer)",
+  description:
+    "Criei um cardápio digital interativo com React, TypeScript e Tailwind CSS, permitindo aos clientes selecionar itens, visualizar o total do pedido e enviar o pedido formatado diretamente via WhatsApp, melhorando a eficiência do atendimento.",
+},
 ]
 
 const education = [
