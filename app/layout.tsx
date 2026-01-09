@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   description:
     "Portfólio online de Anderson Assumpção Junior, desenvolvedor fullstack no Rio de Janeiro. Especialista em React, Next.js, Node.js, Python, Javascript e Typescript. Disponível para projetos, freelas e oportunidades CLT.",
   keywords: "desenvolvedor, fullstack, portfólio, react, nextjs, nodejs, python, javascript, typescript, freelancer, programador, Rio de Janeiro, remoto, contratar desenvolvedor, projetos, web, soluções digitais, Anderson Junior, Anderson Assumpção Junior",
-  viewport: "width=device-width, initial-scale=1.0",
   authors: [{ name: "Anderson Assumpção Junior" }],
   openGraph: {
     title: "Anderson Junior - Desenvolvedor Fullstack",

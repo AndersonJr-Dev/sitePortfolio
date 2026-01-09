@@ -6,8 +6,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { projects } from "@/lib/data"
 
-const categories = ["Todos", "Fullstack", "Frontend", "Backend"]
-
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen relative">
