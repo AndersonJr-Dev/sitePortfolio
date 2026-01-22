@@ -1,30 +1,6 @@
-/* Gradiente animado e fade-in para títulos */
-@keyframes gradient-move {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-@keyframes fadein {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.animate-gradient-fadein {
-  opacity: 0;
-  animation: gradient-move 2.5s ease-in-out forwards, fadein 1.2s ease-in forwards;
-  background-size: 200% 200%;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 @layer base {
   :root {
@@ -47,54 +23,40 @@ body {
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0rem;
+    /* Sharp edges */
+
+    /* Neo-Brutalist Variables */
+    --font-mono: 'JetBrains Mono', monospace;
+    --grid-color: rgba(0, 0, 0, 0.1);
   }
+
   .dark {
-    --background: 0 0% 3.9%;
+    /* Technical Charcoal Theme */
+    --background: 0 0% 5%;
+    /* #0d0d0d */
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 0 0% 7%;
+    /* #121212 */
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 84 81% 65%;
+    /* Acid Green (#c3f55b) */
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 84 81% 65%;
+
+    --grid-color: rgba(255, 255, 255, 0.05);
   }
 }
 
@@ -102,57 +64,36 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 }
 
-/* Galaxy Background */
+/* Technical Grid Background */
 body {
-  background: radial-gradient(ellipse at top, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-    radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(ellipse at left, rgba(76, 0, 255, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at right, rgba(0, 212, 255, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse at center, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
-    linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f0f23 75%, #000000 100%);
-  background-attachment: fixed;
-  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-  min-height: 100vh;
+  background-color: hsl(var(--background));
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
-/* Subtle stars animation */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.2), transparent),
-    radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.3), transparent);
-  background-repeat: repeat;
-  background-size: 200px 100px;
-  animation: sparkle 20s linear infinite;
-  pointer-events: none;
-  z-index: -1;
+/* Custom Scrollbar - Blocky */
+::-webkit-scrollbar {
+  width: 12px;
 }
 
-@keyframes sparkle {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(-100px);
-  }
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+  border-left: 1px solid hsl(var(--border));
 }
 
-/* Blur overlay for content areas */
-.content-blur {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border: 1px solid hsl(var(--background));
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}

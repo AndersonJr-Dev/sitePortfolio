@@ -1,248 +1,182 @@
 "use client"
-// Importação dos componentes reutilizáveis e ícones
+
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Code, Database, Globe, Github, ExternalLink } from "lucide-react"
-// ...existing code...
+import { ArrowRight, Database, Terminal, Cpu, Layers } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-
-// Importa os projetos da página de projetos
 import { projects as allProjects } from "@/lib/data"
 
-// Filtra apenas os projetos em destaque
 const featuredProjects = allProjects.filter((p) => p.featured)
 
-// Lista de habilidades principais exibidas na seção "Especialidades"
 const skills = [
-  { name: "Frontend", icon: Globe, description: "HTML5, CSS3, JavaScript, TypeScript, React, Next.js" },
-  { name: "Backend", icon: Database, description: "Node.js, Express, Python, C#, PostgreSQL, MongoDB" },
-  { name: "DevOps", icon: Code, description: "Docker, AWS, Vercel, CI/CD" },
+  { name: "ARQ_FRONTEND", icon: Layers, description: "React / Next.js / TypeScript / Tailwind" },
+  { name: "SISTEMAS_BACKEND", icon: Database, description: "Node.js / PostgreSQL / Python / Serverless" },
+  { name: "DEVOPS", icon: Cpu, description: "Docker / AWS / Pipelines CI/CD" },
 ]
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen relative">
-      <div className="absolute inset-0 content-blur opacity-20" />
-      <div className="relative">
-        {/* Seção de destaque (Hero Section) */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-          {/* Foto de perfil redonda */}
-          <div className="mb-8">
-            {/* Wrapper com group para efeito hover */}
-            <div className="group mx-auto w-[200px] h-[200px] rounded-full overflow-hidden border-4 border-white shadow-xl transition-transform duration-300 hover:scale-110">
-              <Image
-                src="/meuPerfil.jpg"
-                alt="Minha foto de perfil"
-                width={200}
-                height={200}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </div>
-          {/* Título principal */}
-          {/* Título principal com gradiente animado e fade-in */}
-          <h1
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-pink-400 via-purple-500 to-blue-500 bg-[length:200%_200%] bg-clip-text text-transparent mb-6 animate-gradient-fadein"
-            style={{
-              backgroundImage: 'linear-gradient(90deg, #f472b6, #a78bfa, #3b82f6, #0f5f6bff)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}
-          >
-            Desenvolvedor Fullstack
-          </h1>
-          {/* Descrição do perfil */}
-          <p className="text-xl md:text-2xl text-slate-200 mb-8 max-w-3xl mx-auto">
-            Criando experiências digitais inovadoras com código limpo, design moderno e segurança
-          </p>
-          {/* Botões de ação */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* Botão para ver projetos */}
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-            >
-              <Link href="/projects">
-                Ver Projetos <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-            {/* Botão para entrar em contato */}
-            <Button asChild variant="outline" size="lg">
-              <Link href="/contact">Entrar em Contato</Link>
-            </Button>
-          </div>
+    <div className="min-h-screen relative flex flex-col items-center">
+
+      {/* Decorative Grid Lines */}
+      <div className="fixed inset-0 pointer-events-none z-0 flex justify-center">
+        <div className="w-full max-w-7xl border-x border-zinc-800/30 h-full flex justify-between">
+          <div className="w-px h-full bg-zinc-800/30"></div>
+          <div className="w-px h-full bg-zinc-800/30"></div>
         </div>
-      </section>
-
-      {/* Seção de habilidades (Skills Section) */}
-      <section className="py-16 px-4 relative">
-        {/* Efeito de blur no fundo */}
-        <div className="absolute inset-0 content-blur opacity-30" />
-        <div className="relative">
-          <div className="max-w-6xl mx-auto">
-            {/* Título da seção */}
-            <h2
-              className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-fadein"
-              style={{
-                backgroundImage: 'linear-gradient(90deg, #f472b6, #a78bfa, #3b82f6, #0f5f6bff)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}
-            >
-              Especialidades
-            </h2>
-            {/* Lista de habilidades */}
-            <div className="grid md:grid-cols-3 gap-8">
-              {skills.map((skill, index) => (
-                <Card
-                  key={index}
-                  className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/50 backdrop-blur-sm"
-                >
-                  <CardHeader className="text-center">
-                    {/* Ícone da habilidade */}
-                    <div className="mx-auto w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <skill.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <CardTitle className="text-xl">{skill.name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-slate-200 text-center">{skill.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Seção de projetos em destaque (Featured Projects) */}
-      <section className="py-16 px-4 relative">
-        {/* Efeito de blur no fundo */}
-        <div className="absolute inset-0 content-blur opacity-40" />
-        <div className="relative">
-          <div className="max-w-6xl mx-auto">
-            {/* Título e descrição da seção */}
-            <div className="text-center mb-12">
-              <h2
-                className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-fadein"
-                style={{
-                  backgroundImage: 'linear-gradient(90deg, #f472b6, #a78bfa, #3b82f6, #0f5f6bff)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}
-              >
-                Projetos em Destaque
-              </h2>
-              <p className="text-slate-200 text-lg">
-                Alguns dos meus trabalhos mais recentes e impactantes
-              </p>
-            </div>
-
-            {/* Lista de cards de projetos */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredProjects.map((project) => (
-                <Card
-                  key={project.id}
-                  className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm overflow-hidden"
-                >
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      width={400}
-                      height={200}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <Badge className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600">
-                      {project.category}
-                    </Badge>
-                  </div>
-
-                  <CardHeader>
-                    <CardTitle className="text-lg group-hover:text-blue-600 transition-colors duration-300">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="text-sm line-clamp-2">{project.description}</CardDescription>
-                  </CardHeader>
-
-                  <CardContent>
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {project.technologies.slice(0, 3).map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge variant="secondary" className="text-xs">
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-
-                    <div className="flex gap-2">
-                      <Button asChild size="sm" variant="outline" className="flex-1 bg-transparent">
-                        <Link href={project.github} target="_blank">
-                          <Github className="h-3 w-3 mr-1" />
-                          Código
-                        </Link>
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            {/* Botão para ver todos os projetos */}
-            <div className="text-center mt-12">
-              <Button asChild size="lg" variant="outline">
-                <Link href="/projects">
-                  Ver Todos os Projetos <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Seção de call-to-action (CTA Section) */}
-      <section className="py-20 px-4 relative">
-        {/* Efeito de blur no fundo */}
-        <div className="absolute inset-0 content-blur opacity-30" />
-        <div className="relative">
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Título do CTA */}
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r bg-clip-text text-transparent animate-gradient-fadein"
-              style={{
-                backgroundImage: 'linear-gradient(90deg, #f472b6, #a78bfa, #3b82f6, #0f5f6bff)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent'
-              }}
-            >
-              Pronto para o próximo projeto?
-            </h2>
-            {/* Descrição do CTA */}
-            <p className="text-xl text-slate-200 mb-8">
-              Vamos trabalhar juntos para criar algo incrível
-            </p>
-            {/* Botão para iniciar conversa */}
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
-            >
-              <Link href="/contact">
-                Iniciar Conversa <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
       </div>
+
+      {/* Hero Section */}
+      <section className="relative w-full max-w-7xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-[1.5fr_1fr] gap-12 items-center z-10 border-b border-zinc-800">
+        <div className="space-y-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-accent text-accent-foreground text-xs font-mono font-bold uppercase tracking-wider border border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+            <span className="animate-pulse">●</span> Sistema Online
+          </div>
+
+          <div className="space-y-2">
+            <h2 className="text-zinc-300 font-mono text-sm tracking-widest uppercase">Anderson Assumpção Junior</h2>
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-none tracking-tighter">
+              Desenvolvedor <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-300">FULLSTACK</span>
+            </h1>
+          </div>
+
+          <p className="text-lg text-zinc-200 max-w-lg font-mono leading-relaxed border-l-2 border-accent pl-4">
+            &gt; Inicializando protocolos criativos...<br />
+            &gt; Construindo infraestrutura digital robusta.<br />
+            &gt; Código limpo. Alta performance.
+          </p>
+
+          <div className="flex flex-wrap gap-4 pt-4">
+            <Button asChild size="lg" className="rounded-none bg-accent text-accent-foreground hover:bg-accent/90 border-2 border-transparent hover:border-black transition-all font-mono font-bold text-sm uppercase tracking-wide">
+              <Link href="/projects">
+                /VER_PROJETOS
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="rounded-none border-2 border-zinc-700 hover:bg-zinc-800 hover:text-white font-mono font-bold text-sm uppercase tracking-wide">
+              <Link href="/contact">
+                /CONTATE_ME
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+        <div className="relative group">
+          <div className="absolute -inset-2 bg-accent opacity-20 group-hover:opacity-40 transition-opacity rounded-none blur-none border border-accent/20" />
+          <div className="relative w-full aspect-square max-w-md mx-auto overflow-hidden border-2 border-zinc-800 bg-zinc-900 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
+            <div className="absolute inset-0 bg-accent/10 mix-blend-overlay z-10 pointers-events-none" />
+            <Image
+              src="/meuPerfil.jpg"
+              alt="Anderson Junior"
+              fill
+              className="object-cover transition-all duration-500"
+              priority
+            />
+            {/* Corner Accents */}
+            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-accent z-20"></div>
+            <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-accent z-20"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section - Industrial Cards */}
+      <section className="w-full max-w-7xl mx-auto px-6 py-20 relative z-10 border-b border-zinc-800">
+        <div className="flex items-center gap-4 mb-12">
+          <Terminal className="w-8 h-8 text-accent" />
+          <h2 className="text-3xl font-bold uppercase tracking-tighter">Especificações do Sistema</h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {skills.map((skill, index) => (
+            <Card key={index} className="group bg-zinc-900 border-2 border-zinc-800 hover:border-accent hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.5)] transition-all">
+              <CardHeader className="border-b-2 border-zinc-900 pb-4">
+                <div className="mb-2 text-accent">
+                  <skill.icon className="h-6 w-6" />
+                </div>
+                <CardTitle className="text-lg font-mono text-zinc-100 uppercase">{skill.name}</CardTitle>
+              </CardHeader>
+              <CardContent className="pt-4">
+                <p className="text-zinc-300 font-mono text-sm leading-relaxed">
+                  {skill.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section - Directory List Style */}
+      <section className="w-full max-w-7xl mx-auto px-6 py-20 relative z-10">
+        <div className="flex justify-between items-end mb-12">
+          <h2 className="text-3xl font-bold uppercase tracking-tighter">Banco de Projetos</h2>
+          <div className="h-px flex-1 bg-zinc-800 mx-6 mb-2"></div>
+          <Link href="/projects" className="font-mono text-accent hover:underline text-sm uppercase flex items-center gap-2">
+            [VER_TUDO] <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {featuredProjects.map((project, i) => (
+            <Link href={project.github} target="_blank" key={project.id} className="group block h-full">
+              <div className="h-full border-2 border-zinc-800 bg-zinc-900 p-4 transition-all hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(39,39,42,1)] hover:border-accent flex flex-col">
+
+                {/* Tech Header */}
+                <div className="flex justify-between items-start mb-4 border-b border-zinc-950 pb-2">
+                  <span className="font-mono text-xs text-zinc-500">ID: {project.id.toString().padStart(3, '0')}</span>
+                  <Badge variant="outline" className="rounded-none border-accent text-accent font-mono text-[10px] uppercase">
+                    {project.category}
+                  </Badge>
+                </div>
+
+                <div className="relative aspect-video w-full mb-4 border border-zinc-800 bg-zinc-950 overflow-hidden group-hover:border-accent/50 transition-colors">
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    className="object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+
+                <h3 className="text-xl font-bold text-zinc-100 mb-2 font-mono group-hover:text-accent transition-colors">
+                  {project.title}
+                </h3>
+
+                <p className="text-sm text-zinc-300 font-mono line-clamp-3 mb-4 flex-1">
+                  &gt; {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.technologies.slice(0, 3).map((tech) => (
+                    <span key={tech} className="px-1 bg-zinc-950 text-[10px] text-zinc-400 font-mono border border-zinc-800 uppercase">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="w-full border-t border-zinc-800 bg-zinc-950 py-20 pt-24 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <Terminal className="w-12 h-12 text-zinc-500 mx-auto mb-6" />
+          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-4 text-white">
+            Pronto para o deploy?
+          </h2>
+          <p className="text-zinc-300 font-mono mb-8 max-w-md mx-auto">
+            Vamos trabalhar juntos para iniciar algo incrível!
+          </p>
+          <Button asChild size="lg" className="rounded-none bg-white text-black hover:bg-zinc-200 h-14 px-8 font-bold font-mono uppercase tracking-widest border-2 border-transparent hover:border-accent">
+            <Link href="/contact">
+              [INICIAR_CONTATO]
+            </Link>
+          </Button>
+        </div>
+      </section>
     </div>
   )
 }
