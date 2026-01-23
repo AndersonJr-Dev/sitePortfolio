@@ -9,7 +9,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Terminal, Cpu } from "lucide-react"
-import { Moon, Sun } from "lucide-react"
+
 import { cn } from "@/lib/utils"
 
 
@@ -23,29 +23,7 @@ const navigation = [
 
 // Componente principal de navegação
 export default function Navigation() {
-  // Estado do tema (escuro/claro)
-  const [theme, setTheme] = useState<string | null>(null)
-  // Detecta o tema inicial ao montar
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setTheme(document.documentElement.classList.contains("dark") ? "dark" : "light")
-    }
-  }, [])
-  // Alterna o tema manualmente
-  const toggleTheme = () => {
-    if (typeof window !== "undefined") {
-      const isDark = document.documentElement.classList.contains("dark")
-      if (isDark) {
-        document.documentElement.classList.remove("dark")
-        setTheme("light")
-        localStorage.setItem("theme", "light")
-      } else {
-        document.documentElement.classList.add("dark")
-        setTheme("dark")
-        localStorage.setItem("theme", "dark")
-      }
-    }
-  }
+
   // Estado do menu mobile aberto/fechado
   const [isOpen, setIsOpen] = useState(false)
   // Caminho da página atual
@@ -116,10 +94,7 @@ export default function Navigation() {
 
           {/* Botões do menu mobile e troca de tema */}
           <div className="flex md:hidden items-center gap-2">
-            {/* Botão de troca de tema */}
-            <Button variant="ghost" size="icon" aria-label="Trocar tema" onClick={toggleTheme} className="rounded-none border border-zinc-800 hover:bg-zinc-800">
-              {theme === "dark" ? <Sun className="h-4 w-4 text-accent" /> : <Moon className="h-4 w-4" />}
-            </Button>
+
             {/* Botão para abrir/fechar menu mobile */}
             <Button variant="ghost" size="sm" onClick={() => setIsOpen(!isOpen)} className="rounded-none border border-zinc-800 hover:bg-zinc-800">
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
