@@ -132,7 +132,7 @@ export default function AboutPage() {
               </div>
 
               <Button asChild className="w-full mt-6 rounded-none bg-zinc-100 text-black hover:bg-white font-mono font-bold uppercase border-2 border-transparent">
-                <a href="/curriculo-anderson-fullstack.pdf" download>
+                <a href="/curriculo-anderson-junior.pdf" download>
                   <Download className="h-4 w-4 mr-2" />
                   Baixar CV
                 </a>
