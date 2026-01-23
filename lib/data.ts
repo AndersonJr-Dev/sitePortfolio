@@ -92,7 +92,7 @@ export const projects = [
     image: "/teste-pilops.png",
     technologies: ["React", "Node.js", "Express", "TypeScript"],
     github: "https://github.com/AndersonJr-Dev/pilops-backend",
-    demo: "https://teste-pilops.vercel.app/",
+    demo: "https://pilops-frontend.vercel.app/",
     category: "Fullstack",
     featured: false,
   },
