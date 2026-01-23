@@ -45,6 +45,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
           disableTransitionOnChange
+          forcedTheme="dark"
         >
           <Navigation />
           <main className="min-h-screen relative">{children}</main>
