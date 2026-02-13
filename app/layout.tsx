@@ -4,6 +4,7 @@ import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
+import WhatsAppButton from "@/components/whatsapp-button"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
@@ -49,6 +50,7 @@ export default function RootLayout({
         >
           <Navigation />
           <main className="min-h-screen relative">{children}</main>
+          <WhatsAppButton />
           <Footer />
         </ThemeProvider>
       </body>
