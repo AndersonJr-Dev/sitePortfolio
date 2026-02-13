@@ -11,9 +11,9 @@ import { projects as allProjects } from "@/lib/data"
 const featuredProjects = allProjects.filter((p) => p.featured)
 
 const skills = [
-  { name: "ARQ_FRONTEND", icon: Layers, description: "React / Next.js / TypeScript / Tailwind" },
-  { name: "SISTEMAS_BACKEND", icon: Database, description: "Node.js / PostgreSQL / Express" },
-  { name: "DEVOPS", icon: Cpu, description: "Docker / AWS / Pipelines CI/CD / Vercel" },
+  { name: "ARQ_FRONTEND", icon: Layers, description: "React / Next.js / TypeScript / Tailwind CSS" },
+  { name: "SISTEMAS_BACKEND", icon: Database, description: "Python / FastAPI / Node.js / PostgreSQL / Express" },
+  { name: "DEVOPS", icon: Cpu, description: "Docker / Cloud Services / Pipelines CI/CD / Git" },
 ]
 
 export default function HomePage() {
